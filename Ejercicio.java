@@ -1,3 +1,5 @@
+//Ejercicio propuesto de estructuras lineales
+
 import java.util.Scanner;
 
 class Cliente {
@@ -8,9 +10,8 @@ class Cliente {
         cedula = c;
         nombre = n;
     }
-
-    public void mostrar() {
-        System.out.println("Cédula: " + cedula + ", Nombre: " + nombre);
+       public void mostrar() {
+        System.out.println("Cedula: " + cedula + ", Nombre: " + nombre);
     }
 }
 
@@ -30,12 +31,14 @@ class ListaSimple {
     public void insertar(Cliente nuevoCliente) {
         Nodo nuevo = new Nodo(nuevoCliente);
 
+ //Aplico estructura CompareTo
         if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
             nuevo.siguiente = cabeza;
             cabeza = nuevo;       } else {
             Nodo actual = cabeza;
             while (actual.siguiente != null &&
-                    nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
+  
+                 nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
                 actual = actual.siguiente;
           }
             nuevo.siguiente = actual.siguiente;
