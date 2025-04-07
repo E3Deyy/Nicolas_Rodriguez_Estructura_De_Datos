@@ -1,47 +1,42 @@
 import java.util.Scanner;
 
-// Clase Cliente
 class Cliente {
     String cedula;
     String nombre;
 
-    public Cliente(String cedula, String nombre) {
-        this.cedula = cedula;
-        this.nombre = nombre;
+    public Cliente(String c, String n) {
+        cedula = c;
+        nombre = n;
     }
 
-    @Override
-    public String toString() {
-        return "Cédula: " + cedula + ", Nombre: " + nombre;
+    public void mostrar() {
+        System.out.println("Cédula: " + cedula + ", Nombre: " + nombre);
     }
 }
 
-// Nodo de la lista
 class Nodo {
     Cliente cliente;
     Nodo siguiente;
 
-    public Nodo(Cliente cliente) {
-        this.cliente = cliente;
-        this.siguiente = null;
+    public Nodo(Cliente c) {
+        cliente = c;
+        siguiente = null;
     }
 }
 
-// Lista simple de clientes
-class ListaClientes {
-    private Nodo cabeza;
+class ListaSimple {
+    Nodo cabeza;
 
-    // Insertar de forma ordenada por cédula
-    public void insertarOrdenado(Cliente cliente) {
-        Nodo nuevo = new Nodo(cliente);
+    public void insertar(Cliente nuevoCliente) {
+        Nodo nuevo = new Nodo(nuevoCliente);
 
-        if (cabeza == null || cliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
+        if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
             nuevo.siguiente = cabeza;
             cabeza = nuevo;
         } else {
             Nodo actual = cabeza;
             while (actual.siguiente != null &&
-                   actual.siguiente.cliente.cedula.compareTo(cliente.cedula) < 0) {
+                    nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
                 actual = actual.siguiente;
             }
             nuevo.siguiente = actual.siguiente;
@@ -49,55 +44,47 @@ class ListaClientes {
         }
     }
 
-    // Listar clientes hacia la derecha
-    public void listar() {
-        Nodo actual = cabeza;
-        if (actual == null) {
-            System.out.println("Lista vacía.");
-        } else {
-            while (actual != null) {
-                System.out.println(actual.cliente);
-                actual = actual.siguiente;
-            }
+    public void mostrar() {
+        Nodo temp = cabeza;
+        while (temp != null) {
+            temp.cliente.mostrar();
+            temp = temp.siguiente;
         }
     }
 }
 
-// Clase principal con menú
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ListaClientes lista = new ListaClientes();
-        int opcion;
+        ListaSimple lista = new ListaSimple();
+        int opcion = 0;
 
-        do {
-            System.out.println("\n--- MENÚ ---");
+        while (opcion != 3) {
+            System.out.println("------ MENÚ ------");
             System.out.println("1. Insertar cliente");
-            System.out.println("2. Listar clientes hacia la derecha");
+            System.out.println("2. Listar clientes");
             System.out.println("3. Salir");
             System.out.print("Elija una opción: ");
             opcion = sc.nextInt();
-            sc.nextLine(); // Limpiar buffer
+            sc.nextLine(); // limpiar buffer
 
-            switch (opcion) {
-                case 1:
-                    System.out.print("Ingrese la cédula del cliente: ");
-                    String cedula = sc.nextLine();
-                    System.out.print("Ingrese el nombre del cliente: ");
-                    String nombre = sc.nextLine();
-                    lista.insertarOrdenado(new Cliente(cedula, nombre));
-                    break;
-                case 2:
-                    System.out.println("\nClientes en la lista:");
-                    lista.listar();
-                    break;
-                case 3:
-                    System.out.println("Saliendo del programa...");
-                    break;
-                default:
-                    System.out.println("Opción inválida.");
+            if (opcion == 1) {
+                System.out.print("Ingrese cédula: ");
+                String cedula = sc.nextLine();
+                System.out.print("Ingrese nombre: ");
+                String nombre = sc.nextLine();
+                Cliente c = new Cliente(cedula, nombre);
+                lista.insertar(c);
+                System.out.println("Cliente insertado.");
+            } else if (opcion == 2) {
+                System.out.println("Clientes en la lista:");
+                lista.mostrar();
+            } else if (opcion == 3) {
+                System.out.println("Saliendo...");
+            } else {
+                System.out.println("Opción no válida");
             }
-        } while (opcion != 3);
+        }
 
         sc.close();
     }
