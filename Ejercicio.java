@@ -60,11 +60,10 @@ class ListaSimple {
     temp.cliente.mostrar();
     temp= temp.siguiente;
 }
-}
     //Muestro la cantidad
      System.out.println("El total de clientes es: "+ cantidad);
     }
-
+}
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
