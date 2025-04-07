@@ -36,7 +36,7 @@ class ListaSimple {
 
       if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
             nuevo.siguiente = cabeza;
-            cabeza = nuevo;
+       cabeza = nuevo;
  } 
     else {
         Nodo actual = cabeza;
@@ -50,7 +50,7 @@ class ListaSimple {
     cantidad++;
     }
     public void mostrar() {
-         if (cabeza == null){System.out.println ("No hay clientes en la     lista");
+         if (cabeza == null){System.out.println ("No hay clientes en la lista");
      return;
 }
 
