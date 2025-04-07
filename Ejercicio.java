@@ -53,10 +53,8 @@ class ListaSimple {
     Cantidad++;
 
     public void mostrar() {
-        Nodo temp = cabeza;
-        while (temp != null) {
-            temp.cliente.mostrar();
-            temp = temp.siguiente;
+         if (cabeza = null) {System.out.println ("No hay clientes en la lista");
+}
         }
     //Muestro la cantidad
      System.out.println("El total de clientes es:  + cantidad);
