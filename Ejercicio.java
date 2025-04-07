@@ -40,7 +40,7 @@ class ListaSimple {
  } 
     else {
         Nodo actual = cabeza;
-            while (actual.siguiente != null &&                 nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
+            while (actual.siguiente != null && nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
                 actual = actual.siguiente;
           }
             nuevo.siguiente = actual.siguiente;
