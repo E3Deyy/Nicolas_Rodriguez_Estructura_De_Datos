@@ -68,6 +68,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ListaSimple lista = new ListaSimple();
         int opcion = 0;
+
         while (opcion != 3) {
             System.out.println(" --MENÚ-- ");
             System.out.println("1. Ingrese cliente");
