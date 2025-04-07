@@ -32,9 +32,8 @@ class ListaSimple {
         Nodo nuevo = new Nodo(nuevoCliente);
 
  //Aplico estructura CompareTo
-        if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
-            
-nuevo.cliente =cabeza;
+      if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
+            nuevo.siguiente = cabeza;
             cabeza = nuevo;   } else {
         Nodo actual = cabeza;
             while (actual.siguiente != null &&
