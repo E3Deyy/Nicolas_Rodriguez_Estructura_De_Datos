@@ -55,24 +55,22 @@ nuevo.cliente =cabeza;
         }
     }
 }
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ListaSimple lista = new ListaSimple();
         int opcion = 0;
-
         while (opcion != 3) {
-            System.out.println("------ MENÚ ------");
-            System.out.println("1. Insertar cliente");
+            System.out.println(" --MENÚ-- ");
+            System.out.println("1. Ingrese cliente");
             System.out.println("2. Listar clientes");
             System.out.println("3. Salir");
             System.out.print("Elija una opción: ");
             opcion = sc.nextInt();
-            sc.nextLine(); // limpiar buffer
+            sc.nextLine(); // limpiar
 
             if (opcion == 1) {
-                System.out.print("Ingrese    cédula:");
+                System.out.print("Ingrese la cédula:");
                 String cedula = sc.nextLine();
                 System.out.print("Ingrese nombre: ");
                 String nombre = sc.nextLine();
@@ -83,11 +81,9 @@ public class Main {
                 System.out.println("Clientes en la lista:");
                 lista.mostrar();
            } else if (opcion == 3) {
-                System.out.println("Saliendo...");
+                System.out.println("terminando");
            } else {
-                System.out.println("Opción no válida");
-           }
-      }
-      sc.close();
-  }
+                System.out.println("Opción no válida, por favor ingrese otra");
+           }}
+      sc.close();}
 }
