@@ -32,7 +32,7 @@ class ListaSimple {
     public void insertar(Cliente nuevoCliente) {
         Nodo nuevo = new Nodo(nuevoCliente);
 
-// Esta parte la implementé de otro ejercicio similar que hice anteriormente, solo que era para insertar estudiantes por un id
+// Esta lógica la adapté de otro ejercicio anterior con el ID de estudiantes, ajustada aquí para clientes con la cédula
 
       if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
             nuevo.siguiente = cabeza;
@@ -46,8 +46,7 @@ class ListaSimple {
             nuevo.siguiente = actual.siguiente;
             actual.siguiente = nuevo;
         }
-    //muevo cantidad aquí
-    //Agregaré que cada vez se cuente cuando incremente
+    //Aumento la cantidad de clientes insertados
     cantidad++;
     }
     public void mostrar() {
