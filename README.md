@@ -36,3 +36,5 @@ Algunas cosas que implementé en el código son:
 Un uso de clases para organizar la información.
 
 Inserción de datos usando CompareTo, esto lo apliqué en el método "insertar" de la clase "Lista simple" para que se organice mejor.
+
+también un "Scanner" para leer dato desde la consola ypara el control del menú, usé el ciclo "while".
