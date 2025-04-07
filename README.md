@@ -30,3 +30,9 @@ Inserciones y eliminaciones eficientes.
 Crecimiento dinámico que nos ayuda al desperdicio de memoria.
 
 Ideal para estructuras como agendas, catálogos, listas de tareas, entre otros.
+
+Algunas cosas que implementé en el código son: 
+
+Un uso de clases para organizar la información.
+
+Inserción de datos usando CompareTo
