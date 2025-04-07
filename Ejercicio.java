@@ -36,7 +36,7 @@ class ListaSimple {
 
       if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
             nuevo.siguiente = cabeza;
-       cabeza = nuevo;
+            cabeza = nuevo;
  } 
     else {
         Nodo actual = cabeza;
