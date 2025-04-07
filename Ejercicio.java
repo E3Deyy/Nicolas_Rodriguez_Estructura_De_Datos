@@ -40,19 +40,16 @@ class ListaSimple {
  } 
     else {
         Nodo actual = cabeza;
-
             while (actual.siguiente != null &&                 nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
                 actual = actual.siguiente;
           }
             nuevo.siguiente = actual.siguiente;
             actual.siguiente = nuevo;
         }
+    //muevo cantidad aquí
+    //Agregaré que cada vez se cuente cuando incremente
+    cantidad++;
     }
-
-//Agregaré que cada vez se cuente cuando incremente
-
-    Cantidad++;
-
     public void mostrar() {
          if (cabeza = null) {   System.out.println ("No hay clientes en la     lista");
      return;
