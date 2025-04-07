@@ -51,7 +51,7 @@ class ListaSimple {
     cantidad++;
     }
     public void mostrar() {
-         if (cabeza = null) {   System.out.println ("No hay clientes en la     lista");
+         if (cabeza == null){System.out.println ("No hay clientes en la     lista");
      return;
 }
 
@@ -62,7 +62,7 @@ class ListaSimple {
 }
 }
     //Muestro la cantidad
-     System.out.println("El total de clientes es:  + cantidad);
+     System.out.println("El total de clientes es: "+ cantidad);
     }
 
 public class Main {
