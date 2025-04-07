@@ -31,15 +31,16 @@ class ListaSimple {
     public void insertar(Cliente nuevoCliente) {
         Nodo nuevo = new Nodo(nuevoCliente);
 
- //Aplico estructura CompareTo
+// Esta parte la implementé de otro ejercicio similar que hice anteriormente, solo que era para insertar estudiantes por un id
+
       if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
             nuevo.siguiente = cabeza;
-            cabeza = nuevo;   } 
+            cabeza = nuevo;
+ } 
     else {
         Nodo actual = cabeza;
-            while (actual.siguiente != null &&
-  
-                 nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
+
+            while (actual.siguiente != null &&                 nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
                 actual = actual.siguiente;
           }
             nuevo.siguiente = actual.siguiente;
