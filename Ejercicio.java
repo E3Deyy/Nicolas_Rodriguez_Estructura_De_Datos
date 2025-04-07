@@ -27,6 +27,7 @@ class Nodo {
 
 class ListaSimple {
     Nodo cabeza;
+    int cantidad=0;
 
     public void insertar(Cliente nuevoCliente) {
         Nodo nuevo = new Nodo(nuevoCliente);
