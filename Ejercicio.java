@@ -48,6 +48,10 @@ class ListaSimple {
         }
     }
 
+//Agregaré que cada vez se cuente cuando incremente
+
+Cantidad++;
+
     public void mostrar() {
         Nodo temp = cabeza;
         while (temp != null) {
