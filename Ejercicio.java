@@ -32,13 +32,12 @@ class ListaSimple {
 
         if (cabeza == null || nuevoCliente.cedula.compareTo(cabeza.cliente.cedula) < 0) {
             nuevo.siguiente = cabeza;
-            cabeza = nuevo;
-        } else {
+            cabeza = nuevo;       } else {
             Nodo actual = cabeza;
             while (actual.siguiente != null &&
                     nuevoCliente.cedula.compareTo(actual.siguiente.cliente.cedula) > 0) {
                 actual = actual.siguiente;
-            }
+          }
             nuevo.siguiente = actual.siguiente;
             actual.siguiente = nuevo;
         }
@@ -69,23 +68,22 @@ public class Main {
             sc.nextLine(); // limpiar buffer
 
             if (opcion == 1) {
-                System.out.print("Ingrese cédula: ");
+                System.out.print("Ingrese    cédula:");
                 String cedula = sc.nextLine();
                 System.out.print("Ingrese nombre: ");
                 String nombre = sc.nextLine();
                 Cliente c = new Cliente(cedula, nombre);
                 lista.insertar(c);
                 System.out.println("Cliente insertado.");
-            } else if (opcion == 2) {
+           } else if (opcion == 2) {
                 System.out.println("Clientes en la lista:");
                 lista.mostrar();
-            } else if (opcion == 3) {
+           } else if (opcion == 3) {
                 System.out.println("Saliendo...");
-            } else {
+           } else {
                 System.out.println("Opción no válida");
-            }
-        }
-
-        sc.close();
-    }
+           }
+      }
+      sc.close();
+  }
 }
