@@ -53,20 +53,19 @@ class ListaSimple {
     Cantidad++;
 
     public void mostrar() {
-         if (cabeza = null)      {System.out.println ("No hay clientes en la     lista");
+         if (cabeza = null) {   System.out.println ("No hay clientes en la     lista");
      return;
 }
 
     Nodo temp = cabeza;
     while (temp !=null){
-    temp.cliente.mostrar();}
-        }
+    temp.cliente.mostrar();
+    temp= temp.siguiente;
+}
     //Muestro la cantidad
      System.out.println("El total de clientes es:  + cantidad);
-
     }
-
-}
+    }
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
