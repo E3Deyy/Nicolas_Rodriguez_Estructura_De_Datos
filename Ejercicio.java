@@ -50,7 +50,7 @@ class ListaSimple {
 
 //Agregaré que cada vez se cuente cuando incremente
 
-Cantidad++;
+    Cantidad++;
 
     public void mostrar() {
         Nodo temp = cabeza;
@@ -58,7 +58,11 @@ Cantidad++;
             temp.cliente.mostrar();
             temp = temp.siguiente;
         }
+    //Muestro la cantidad
+     System.out.println("El total de clientes es:  + cantidad);
+
     }
+
 }
 public class Main {
     public static void main(String[] args) {
