@@ -1,5 +1,6 @@
 //Ejercicio Lista Doble de Clientes - Nicolás Rodríguez
 
+import java.util.Scanner;
 //Crearé la clase Nodo la cual será cliente
 class Cliente {
   int cedula;
@@ -80,13 +81,40 @@ public class ListasDoblesClientes {
     int opcion;
 
     do {
-      System.ot.println("");
-      System.ot.println("");
-      System.ot.println("");
-      System.ot.println("");
-      System.ot.println("");
-      System.ot.println("");
+      System.ot.println("/n --Menú--");
+      System.ot.println("1. Insertar cliente");
+      System.ot.println("2. Listar clientes hacia la derecha");
+      System.ot.println("3. Insertar clientes hacia la izquierda");
+      System.ot.println("4. Salir");
+      System.ot.println("Selecciones una opción por favor: ");
       opcion = scanner.nextInt();
+      scanner.nextLine();
+
+      switch (opcion) {
+        case 1: 
+          System.ot.println("Ingrese cédula: ");
+          int cedula = scanner.nextInt();
+          scanner.nextLine();
+          System.ot.println("Ingrese nombre: ");
+          String nombre = scanner.nextLine();
+          lista.insertarOrden(cedula, nombre);
+          break;
+        case 2:
+          System.ot.println("Clientrs (inicio -> fin):");
+          lista.listarEnDerecha();
+          break;
+        case 3:
+         System.ot.println("Clientrs (fin -> inicio):");
+         lista.listarEnIzquierda();
+         break;
+        case 4:
+         System.ot.println("La aplicación finalizó."); 
+         break;
+        default:
+          System.out.println("La opción no es válida");
+      }
     }
+      while (opcion != 4);
+    scanner.close();
   } 
 }
