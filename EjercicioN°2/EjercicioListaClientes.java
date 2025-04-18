@@ -16,7 +16,7 @@ class Cliente {
   }
 }
 //Clase que maneja la lista doble
-class listaDoble {
+class ListaDoble {
   private Cliente cabeza;
   private Cliente cola;
 
@@ -36,7 +36,7 @@ class listaDoble {
     Cliente actual = cabeza;
     while (actual.siguiente != null && actual.siguiente.cedula < cedula)
       actual = actual.siguiente;
-  }
+    
     nuevo.siguiente = actual.siguiente;
     if (actual.siguiente != null) {
       actual.siguiente.anterior = nuevo;
@@ -63,7 +63,7 @@ public void listarEnDerecha(){
 //Listar de fin a principio
 public void listarEnIzquierda() {
   if (cola == null) {
-    System.out.prinln ("Lista vacía");
+    System.out.println ("Lista vacía");
     return;
   }
   Cliente actual = cola;
@@ -71,8 +71,8 @@ public void listarEnIzquierda() {
     System.out.println("Cédula: " + actual.cedula + ", Nombre: " + actual.nombre);
     actual = actual.anterior;
   }
+  }
 }
-
 //Clase principal con el menú
 public class ListasDoblesClientes {
   public static void main(String[] args) {
@@ -81,7 +81,7 @@ public class ListasDoblesClientes {
     int opcion;
 
     do {
-      System.out.println("/n --Menú--");
+      System.out.println("\n --Menú--");
       System.out.println("1. Insertar cliente");
       System.out.println("2. Listar clientes hacia la derecha");
       System.out.println("3. Insertar clientes hacia la izquierda");
@@ -104,7 +104,7 @@ public class ListasDoblesClientes {
           lista.listarEnDerecha();
           break;
         case 3:
-         System.out.println("Clientrs (fin -> inicio):");
+         System.out.println("Clientes (fin -> inicio):");
          lista.listarEnIzquierda();
          break;
         case 4:
