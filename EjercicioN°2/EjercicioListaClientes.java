@@ -50,7 +50,7 @@ class listaDoble {
 //comienzo a listar de principio a fin
 public void listarEnDerecha(){
   if (cabeza == null){
-    System.out.prinln("Lista vacía. ");
+    System.out.println("Lista vacía. ");
     return;
 }
   Cliente actual = cabeza;
@@ -67,48 +67,48 @@ public void listarEnIzquierda() {
     return;
   }
   Cliente actual = cola;
-  While (actual != null) {
-    System.out.prinln("Cédula: " + actual.cedula + ", Nombre: " + actual.nombre);
+  while (actual != null) {
+    System.out.println("Cédula: " + actual.cedula + ", Nombre: " + actual.nombre);
     actual = actual.anterior;
   }
 }
 
 //Clase principal con el menú
 public class ListasDoblesClientes {
-  public static void main(string[] args) {
+  public static void main(String[] args) {
     Scanner scanner = new Scanner (System.in);
     ListaDoble lista = new ListaDoble();
     int opcion;
 
     do {
-      System.ot.println("/n --Menú--");
-      System.ot.println("1. Insertar cliente");
-      System.ot.println("2. Listar clientes hacia la derecha");
-      System.ot.println("3. Insertar clientes hacia la izquierda");
-      System.ot.println("4. Salir");
-      System.ot.println("Selecciones una opción por favor: ");
+      System.out.println("/n --Menú--");
+      System.out.println("1. Insertar cliente");
+      System.out.println("2. Listar clientes hacia la derecha");
+      System.out.println("3. Insertar clientes hacia la izquierda");
+      System.out.println("4. Salir");
+      System.out.println("Selecciones una opción por favor: ");
       opcion = scanner.nextInt();
       scanner.nextLine();
 
       switch (opcion) {
         case 1: 
-          System.ot.println("Ingrese cédula: ");
+          System.out.println("Ingrese cédula: ");
           int cedula = scanner.nextInt();
           scanner.nextLine();
-          System.ot.println("Ingrese nombre: ");
+          System.out.println("Ingrese nombre: ");
           String nombre = scanner.nextLine();
           lista.insertarOrden(cedula, nombre);
           break;
         case 2:
-          System.ot.println("Clientrs (inicio -> fin):");
+          System.out.println("Clientes (inicio -> fin):");
           lista.listarEnDerecha();
           break;
         case 3:
-         System.ot.println("Clientrs (fin -> inicio):");
+         System.out.println("Clientrs (fin -> inicio):");
          lista.listarEnIzquierda();
          break;
         case 4:
-         System.ot.println("La aplicación finalizó."); 
+         System.out.println("La aplicación finalizó."); 
          break;
         default:
           System.out.println("La opción no es válida");
