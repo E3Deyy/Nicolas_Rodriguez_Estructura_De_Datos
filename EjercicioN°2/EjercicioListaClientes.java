@@ -44,7 +44,7 @@ class ListaDoble {
       cola = nuevo; //Un nuevo al final
     } 
     actual.siguiente = nuevo;
-    nuevo.anteior = actual;
+    nuevo.anterior = actual;
   }
 }
 //comienzo a listar de principio a fin
