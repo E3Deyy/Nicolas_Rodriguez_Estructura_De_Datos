@@ -1,6 +1,6 @@
 Instrucciones 
 
-1. Crear una aplicación que simule la lista doble del ejercicio anterior usando como herramienta de programación el lenguaje C#
+1. Crear una aplicación que simule la lista doble del ejercicio anterior
 2. El aplicativo deberá funcionar análogamente y deberá tener las siguientes condiciones:
 
 - Usara el paradigma de programación orientado a objetos.
