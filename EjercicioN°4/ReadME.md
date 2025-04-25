@@ -1,3 +1,5 @@
+Ejercicio Creado en otra rama del repositorio
+
 + Crear una aplicación que simule la lista doble del ejercicio anterior.
 - El aplicativo deberá funcionar análogamente y deberá tener las siguientes condiciones:
 1. Usara el paradigma de programación orientado a objetos
