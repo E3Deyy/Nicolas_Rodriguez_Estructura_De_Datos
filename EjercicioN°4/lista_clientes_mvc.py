@@ -1,3 +1,4 @@
+#Ejercicio Listas dobles MVC
 import tkinter as tk
 from tkinter import messagebox
 
@@ -51,7 +52,7 @@ lista = ListaDoble()
 
 #Funciones para los botones
 def agregar_cliente():
-    cedula_texxto = entrada_cedula.get()
+    cedula_texto = entrada_cedula.get()
     nombre = entrada_nombre.get()
     if cedula_texto.isdigit() and nombre:
         cedula = int(cedula_texto)
@@ -74,13 +75,19 @@ def mostrar_izquierda():
     for cliente in clientes:
         salida.insert(tk.END, cliente + "\n")
 #Elementos que salen en la interfaz
-tk.Label().grid()
+tk.Label(ventana, text="Cédula: ").grid(row=0, column=0)
 entrada_cedula = tk.Entry(ventana)
 entrada_cedula.grid(row=0, column=1)
 
-tk.label().grid()
+tk.label(ventana, text="Nombre: ").grid(row=1, column=0)
 entrada_nombre = tk.Entry(ventana)
 entrada_nombre.grid(row=1, column=1)
+
+tk.Button(ventana, text="Agregar cliente", command=agregar_cliente).grid(row=2, column=0, columnspan=2, pady=5)
+tk.Button(ventana, text="Listar (inicio -> Fin)", command=mostrar_derecha).grid(row=3, column=0, columnspan=2)
+tk.Button(ventana, text="Listar (Fin -> Inicio)", command=mostrar_izquierda).grid(row=4, column=0, columnspan=2)
+salida = tk.Text(ventana, width=30, height=10)
+salida.grid(row=5, column=0, columnspan=2, pady=10)
 
 #ventana
 ventana.mainloop()
