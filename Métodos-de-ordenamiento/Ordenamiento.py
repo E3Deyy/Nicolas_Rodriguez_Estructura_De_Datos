@@ -36,3 +36,18 @@ def ingresar_lista():
 except ValueError:
     print("Error: por favor ingrese solo número separados por ,")
     return ingresar_lista()
+
+#Menú de opciones
+def menu():
+    while True:
+        print("\n --Menú de ordenamiento--")
+        print("1 Método burbuja")
+        print("2 Método de inserción")
+        print("3 método quicksort")
+        print("")
+
+        opcion = input("Seleccione una opción por favor: ")
+
+        if opcion == '1':
+            lista = ingresar_lista()
+            print("Lista ordenada con burbujas:", metodo_burbuja(lista))
