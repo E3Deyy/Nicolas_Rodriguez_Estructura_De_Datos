@@ -1,4 +1,4 @@
-
+import sys
 #Método de ordenamiento burbuja
 def metodo_burbuja(lista):
     n = len(lista)
@@ -51,3 +51,17 @@ def menu():
         if opcion == '1':
             lista = ingresar_lista()
             print("Lista ordenada con burbujas:", metodo_burbuja(lista))
+
+        elif opcion == '2':
+            ista = ingresar_lista()
+            print("Lista ordenada con inserción: ", metodo_secuencial(lista))
+
+        elif opcion == '4':
+            print("Saliendo del programa")
+            sys.exit()
+        else:
+            print("Esta opción no es válida, intente de nuevo porfavor")
+
+#Ejecuto el programa
+if __name__ == '__main__':
+    menu()
