@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
-class NodoCLiente:
+class NodoCliente:
     def __init__(self, cedula, nombre):
         self.cedula = cedula
         self.nombre = nombre
@@ -62,7 +62,7 @@ class App:
 
     def insertar_cliente(self):
         cedula = self.entry_cedula.get().strip()
-        nombre = self.entry_nombre: get().strip()
+        nombre = self.entry_nombre.get().strip()
         if not cedula or not nombre:
             messagebox.showwarning("Hay campos vacíos", "Llene toda la información por favor.")
             return
@@ -71,7 +71,7 @@ class App:
         self.entry_cedula.delete(0, tk.END)
         self.entry_nombre.delete(0, tk.END)
 
-    def listar_clientes(self:)
+    def listar_clientes(self):
         clientes = self.lista.listar_clientes()
         self.txt_resultado.delete("1.0", tk.END)
         if clientes:
@@ -79,8 +79,10 @@ class App:
                 self.txt_resultado.insert(tk.END, c + "\n")
         else:
             self.txt_resultado.insert(tk.END, "No hay clientes en la lista.")
-        #Ejecuto la aplicación
-        if __name__ == '__main__':
-            root = tk.Tk()
-            app = App(root)
-            root.mainloop()
+
+# Ejecutar la aplicación
+if __name__ == '__main__':
+    root = tk.Tk()
+    app = App(root)
+    root.mainloop()
+
