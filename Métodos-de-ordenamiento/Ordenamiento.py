@@ -18,3 +18,21 @@ def método_secuencial(lista):
             j -= 1
         lista[j + 1] = actual
     return lista
+
+#Método quicksort
+def metodo_quicksort(lista):
+    if lem(lista) <= 1:
+        return lista
+    pivote = lista[len(lista) // 2]
+    izquierda = [x for x in lista if x < pivote]
+    centro = [x for x in lista if x == pivote]
+    derecha = [x for x in lista if x > pivote]
+    return metodo_quicksort(izquierda) + centro + metodo_quicksort(derecha)
+
+#Lista del usuario
+def ingresar_lista():
+    datos = input("ingrese una lista de números separados por ,: ")
+    return ingresar_listas()
+except ValueError:
+    print("Error: por favor ingrese solo número separados por ,")
+    return ingresar_lista()
