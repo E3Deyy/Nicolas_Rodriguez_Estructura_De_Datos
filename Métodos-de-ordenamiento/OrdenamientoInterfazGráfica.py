@@ -34,8 +34,23 @@ def metodo_quicksort(lista):
     return metodo_quicksort(izquierda) + centro + metodo_quicksort(derecha)
 
   #interfaz gráfica
+class OrdenamientoApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.tittle("Métodos de ordenamiento")
 
+        tk.Label(root, text="Ingrese números separados por , : ").pack()
+        self.entry_datos = tk.Entry(root, width=50)
+        self.entry_datos.pack(pady=5)
 
+        tk.Button().pack()
+        tk.Button().pack()
+        tk.Button().pack()
+        tk.Button().pack()
+
+        self.resultado = tk.Text(root, height=11, width=70)
+        self.resultado.pack()
+    
     def obtener_lista(self):
         entrada = self.entry_datos.get()
         try:
