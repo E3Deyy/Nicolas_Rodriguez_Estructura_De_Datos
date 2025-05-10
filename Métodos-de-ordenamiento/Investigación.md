@@ -32,6 +32,24 @@ Complejidad:
 - Tiempo: O(n²) en el peor caso.
 - Espacio: O(1)
 
+- 3. Quicksort
+Descripción:
+- Divide y conquista: elige un pivote y divide la lista en menores, iguales y mayores.
+-Aplica el mismo proceso recursivamente.
+
+Características:
+-Muy eficiente para grandes volúmenes de datos.
+-Usado en librerías estándar de muchos lenguajes.
+
+Complejidad:
+- Tiempo: O(n log n) en promedio, O(n²) en el peor caso.
+- Espacio: O(log n) por la recursividad.
+
+Ejemplo:
+Lista: [5, 3, 8, 4]
+Pivote = 4 → Menores: [3], Iguales: [4], Mayores: [5, 8]
+Resultado: [3, 4, 5, 8]
+
 Ejemplo:
 Lista original: [5, 3, 8, 4]
 Paso 1: [3, 5, 8, 4]
