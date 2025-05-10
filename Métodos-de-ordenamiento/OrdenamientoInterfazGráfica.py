@@ -1,4 +1,5 @@
 #Por interfaz gráfica
+
 import tkinter as tk
 from tkinter import messagebox
 
@@ -62,7 +63,7 @@ def metodo_quicksort(lista, profundidad=0):
 class OrdenamientoApp:
     def __init__(self, root):
         self.root = root
-        self.root.tittle("Métodos de ordenamiento")
+        self.root.title("Métodos de ordenamiento")
 
         tk.Label(root, text="Ingrese números separados por , : ").pack()
         self.entry_datos = tk.Entry(root, width=50)
