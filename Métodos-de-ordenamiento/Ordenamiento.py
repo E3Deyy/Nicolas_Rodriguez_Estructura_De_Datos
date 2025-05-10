@@ -9,7 +9,7 @@ def metodo_burbuja(lista):
     return lista
 
 #Método de ordenamiento por inserción
-def método_secuencial(lista):
+def metodo_secuencial(lista):
     for i in range(1, len(lista)):
         actual = lista[i]
         j = i - 1
@@ -35,9 +35,9 @@ def ingresar_lista():
     try:
         lista = [(int(x.strip()) for x in datos.split(','))]
         return lista
-except ValueError:
-    print("Error: por favor ingrese solo número separados por ,")
-    return ingresar_lista()
+    except ValueError:
+        print("Error: por favor ingrese solo número separados por ,")
+        return ingresar_lista()
 
 #Menú de opciones
 def menu():
