@@ -1,3 +1,4 @@
+#Por Terminal
 import sys
 #Método de ordenamiento burbuja
 def metodo_burbuja(lista):
