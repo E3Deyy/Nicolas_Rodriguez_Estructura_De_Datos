@@ -1,6 +1,6 @@
 #Por interfaz gráfica
 import tkinter as tk
-from tkinter impor messagebox
+from tkinter import messagebox
 
 # Método de ordenamiento Burbuja
 def metodo_burbuja(lista):
