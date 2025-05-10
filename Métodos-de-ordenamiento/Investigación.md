@@ -47,7 +47,7 @@ Paso 2: [3, 5, 8, 4]
 Paso 3: [3, 4, 5, 8]
 
 
-- 3. __Quicksort__
+-3. __Quicksort__
 Descripción:
 - Divide y conquista: elige un pivote y divide la lista en menores, iguales y mayores.
 -Aplica el mismo proceso recursivamente.
