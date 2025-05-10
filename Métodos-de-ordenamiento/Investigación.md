@@ -1,4 +1,5 @@
 - ¿Qué es un método de ordenamiento?
+
 Un método de ordenamiento es un algoritmo utilizado para organizar un conjunto de datos (por ejemplo, una lista de números) en un orden específico, ya sea ascendente o descendente. Estos métodos son fundamentales en informática, ya que optimizan búsquedas, mejoran la legibilidad de la información y facilitan el análisis de datos.
 
 -1. Método Burbuja (Bubble Sort)
