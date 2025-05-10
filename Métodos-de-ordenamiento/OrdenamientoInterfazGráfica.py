@@ -1,5 +1,4 @@
 #Por interfaz gráfica
-
 import tkinter as tk
 from tkinter impor messagebox
 
@@ -43,10 +42,10 @@ class OrdenamientoApp:
         self.entry_datos = tk.Entry(root, width=50)
         self.entry_datos.pack(pady=5)
 
-        tk.Button().pack()
-        tk.Button().pack()
-        tk.Button().pack()
-        tk.Button().pack()
+        tk.Button(root, text="Método burbuja", command=self.ordenar_burbuja).pack(pady=2)
+        tk.Button(root, text="Método inserción", command=self.ordenar_secuencial).pack(pady=2)
+        tk.Button(root, text="Método quicksort", command=self.ordenar_quicksort).pack(pady=2)
+        tk.Button(root, text="Salir", command=root.quit).pack()
 
         self.resultado = tk.Text(root, height=11, width=70)
         self.resultado.pack()
