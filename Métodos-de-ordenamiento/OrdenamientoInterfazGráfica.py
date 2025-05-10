@@ -4,12 +4,17 @@ from tkinter import messagebox
 
 # Método de ordenamiento Burbuja
 def metodo_burbuja(lista):
+    pasos = []
     n = len(lista)
+    pasos.append(f"Lista inicial: {lista}")
     for i in range(n):
         for j in range(0, n - i - 1):
+            pasos.append(f"Comparando {lista[j]} y {lista[j+ 1]}")
             if lista[j] > lista[j + 1]:
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]
-    return lista
+                pasos.append(f"Intercambiados: {lista}")
+    pasos.append(f"Lista ordenada: {lista}")
+    return lista, pasos
 
 # Método de ordenamiento Secuencial (por inserción)
 def metodo_secuencial(lista):
