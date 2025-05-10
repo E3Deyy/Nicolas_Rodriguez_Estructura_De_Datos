@@ -12,7 +12,8 @@ def metodo_burbuja(lista):
             pasos.append(f"Comparando {lista[j]} y {lista[j+ 1]}")
             if lista[j] > lista[j + 1]:
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]
-                pasos.append(f"Intercambiados: {lista}")
+            else:
+                pasos.append("No se intercambian")
     pasos.append(f"Lista ordenada: {lista}")
     return lista, pasos
 
