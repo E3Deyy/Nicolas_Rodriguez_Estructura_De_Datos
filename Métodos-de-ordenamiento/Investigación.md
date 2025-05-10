@@ -18,7 +18,9 @@ Complejidad:
 __Ejemplo Bubble Sort:__
 
 Lista original: [5, 3, 8, 4]
+
 Iteración 1: [3, 5, 4, 8]
+
 Iteración 2: [3, 4, 5, 8] (ordenada)
 
 -2. __Método Secuencial (Inserción)__
@@ -37,8 +39,11 @@ Complejidad:
 __Ejemplo inserción:__
 
 Lista original: [5, 3, 8, 4]
+
 Paso 1: [3, 5, 8, 4]
+
 Paso 2: [3, 5, 8, 4]
+
 Paso 3: [3, 4, 5, 8]
 
 
@@ -58,5 +63,8 @@ Complejidad:
 __Ejemplo Quicksort:__
 
 Lista: [5, 3, 8, 4]
+
 Pivote = 4 → Menores: [3], Iguales: [4], Mayores: [5, 8]
+
 Resultado: [3, 4, 5, 8]
+
