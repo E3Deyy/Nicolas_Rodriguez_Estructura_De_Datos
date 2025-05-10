@@ -44,7 +44,7 @@ def menu():
         print("1 Método burbuja")
         print("2 Método de inserción")
         print("3 método quicksort")
-        print("")
+        print("4 Salir")
 
         opcion = input("Seleccione una opción por favor: ")
 
@@ -56,6 +56,10 @@ def menu():
             ista = ingresar_lista()
             print("Lista ordenada con inserción: ", metodo_secuencial(lista))
 
+        elif opcion =='3':
+            lista = ingresar_lista()
+            print("Lista ordenada con quicksort", metodo_quicksort(lista))
+            
         elif opcion == '4':
             print("Saliendo del programa")
             sys.exit()
