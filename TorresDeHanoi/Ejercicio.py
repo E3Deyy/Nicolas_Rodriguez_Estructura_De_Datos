@@ -4,7 +4,7 @@ import time
 class TorreDeHanoiGUI:
     def __init__(self, root, n_discos):
         self.root = root
-        self.root.tittle("Torres de Hanoi")
+        self.root.title("Torres de Hanoi")
         self.n_discos = n_discos
 
         #Configuración de canvas
