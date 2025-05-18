@@ -24,5 +24,16 @@ class TorreDeHanoiGUI:
       for i in range(self.n_discos, 0, -1):
           ancho = 20 + i * 20
           disco = self.canvas.create_rectangle(0, 0, ancho, 20, fill="black")
-          self.torres['A'].append()
+          self.torres['A'].append(disco)
       self.actualizar_dibujos()
+      
+  def actualizar_dibujos(self):
+      for torre in ['', '', '']:
+          x_base = self.coords_torres[torre]
+          for idx, disco in enumerate(reversed(self.torres[torre])):
+              ancho = self.canvas.coords()[2]
+              x1 = x_base - ancho // 2
+              y1 = self.altura_base - (idx + 1) * 22
+              x2 =
+              y2 = y1 + 20
+                  
